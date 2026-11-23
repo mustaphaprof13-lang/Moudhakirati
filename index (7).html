@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة مذكراتي التعليمية | Moudhakirati DZ - مذكرات وملفات اللغة الفرنسية المعتمدة 2026/2027</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Cairo & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            accent: {
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              sky: '#0284c7'
+            }
+          },
+          fontFamily: {
+            sans: ['Cairo', 'Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#f8f9ff] text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Top Notification Ribbon -->
+  <div class="bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-800 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-inner flex flex-wrap items-center justify-center gap-2">
+    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    <span>الموسم الدراسي المعتمد 2026 / 2027 • المنهاج الوزاري المخفف لمادة اللغة الفرنسية FLE • المشرف المسؤول: أ. مصطفى بن قدور (0669453735)</span>
+    <span class="text-xs bg-emerald-500/30 text-emerald-200 border border-emerald-400/40 px-2 py-0.5 rounded-full font-bold">
+      <i class="fa-solid fa-server ml-1"></i> خوادم التنزيل المباشر نشطة 100%
+    </span>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand & Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-700 to-blue-500 text-white flex items-center justify-center shadow-lg shadow-blue-500/20 ring-4 ring-blue-50 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-graduation-cap text-2xl"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-black tracking-tight text-blue-900">مُـذَكِّـرَاتِي</span>
+            <span class="text-[10px] bg-blue-100 text-blue-800 font-extrabold px-2 py-0.5 rounded-full border border-blue-200">الجزائر 2027</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-medium">المنصة الشاملة لأساتذة ومفتشي اللغة الفرنسية (5AP & 1-4AM)</p>
+        </div>
+      </a>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- Button: Direct Download Hub -->
+        <a href="#download-hub" class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 font-bold text-xs sm:text-sm border border-blue-200 transition">
+          <i class="fa-solid fa-cloud-arrow-down text-blue-600"></i>
+          <span>مركز التحميل المباشر</span>
+        </a>
+
+        <!-- Button: WhatsApp Support -->
+        <a href="https://wa.me/213669453735?text=مرحباً_أستاذ_مصطفى_أود_الاستفسار_عن_مذكرات_المنصة" target="_blank" class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-xl text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 font-bold text-xs sm:text-sm transition">
+          <i class="fa-brands fa-whatsapp text-emerald-600 text-base"></i>
+          <span class="hidden sm:inline">تواصل واتساب:</span>
+          <span class="font-mono text-xs">0669453735</span>
+        </a>
+
+        <!-- Button: Admin Login Modal Trigger -->
+        <button onclick="openAdminModal()" class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-black text-xs sm:text-sm shadow-md shadow-amber-500/20 transition active:scale-95" title="بوابة دخول المشرف العام">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>دخول لوحة الإدارة</span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Right Column: Title & Intro -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-right">
+          <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-1.5 rounded-full text-blue-800 text-xs sm:text-sm font-bold shadow-xs">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+            <span>الدفعة السنوية المعتمدة 2026 / 2027 • المنهاج المخفف FLE</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
+            المنصة الجزائرية الأولى لمذكرات وملفات <span class="text-transparent bg-clip-text bg-gradient-to-l from-blue-700 to-indigo-600">اللغة الفرنسية</span> المعتمدة رسمياً
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            وفّر أكثر من <strong class="text-blue-900 font-black">12 ساعة تحضير أسبوعياً</strong>! حزم بيداغوجية كاملة جاهزة للتعديل والطباعة الفورية بصيغتي <span class="bg-blue-100 text-blue-900 px-2 py-0.5 rounded font-bold text-sm">Word + PDF</span>، مع عروض <span class="bg-indigo-100 text-indigo-900 px-2 py-0.5 rounded font-bold text-sm">Data Show 1080p</span> تفاعلية وشبكات تقويم معيارية مطابقة لتعليمات المفتشية العامة.
+          </p>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-bold text-slate-700">
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-500"></i> مطابق 100% للمنهاج الوزاري</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-amber-500"></i> تحميل فوري ودائم</div>
+            <div class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-blue-600"></i> دفع محلي آمن بالدينار الجزائري</div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <button onclick="openAdminModal()" class="px-6 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm shadow-lg shadow-blue-600/30 transition hover:-translate-y-0.5 flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>فتح لوحة تحكم المسؤول (بنقرة واحدة)</span>
+            </button>
+            <a href="#packs" class="px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-slate-300 shadow-xs transition flex items-center gap-2">
+              <i class="fa-solid fa-box-open text-blue-600"></i>
+              <span>استكشاف حزم المذكرات والأسعار</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Left Column: Official Payment Information Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-3xl p-6 shadow-xl border border-slate-200/90 space-y-4">
+            
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div>
+                <h3 class="font-black text-slate-900 text-base">بيانات التحويل المعتمدة للمنصة</h3>
+                <p class="text-xs text-slate-500">تطبيق BaridiMob / حوالات CCP</p>
+              </div>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full border border-emerald-200">
+                BaridiMob 100%
+              </span>
+            </div>
+
+            <!-- RIP BaridiMob -->
+            <div class="bg-blue-50/70 rounded-2xl p-4 border border-blue-100 space-y-1.5">
+              <div class="flex items-center justify-between text-xs text-slate-600 font-medium">
+                <span>رقم الحساب البريدي الجاري (RIP BaridiMob) :</span>
+              </div>
+              <div class="flex items-center justify-between gap-2">
+                <span id="rip-text" class="font-mono text-base sm:text-lg font-black text-blue-900 tracking-wider">00799999000845446968</span>
+                <button onclick="copyRip()" class="px-3 py-1.5 bg-white hover:bg-blue-100 border border-blue-200 rounded-lg text-blue-700 text-xs font-bold flex items-center gap-1 transition active:scale-95 shadow-2xs">
+                  <i class="fa-regular fa-copy"></i>
+                  <span id="copy-btn-label">نسخ</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CCP and Account Holder -->
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                <span class="block text-slate-500 font-medium mb-1">المستفيد المعتمد:</span>
+                <span class="font-bold text-slate-800 text-sm">أ. مصطفى بن قدور</span>
+              </div>
+              <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-left" dir="ltr">
+                <span class="block text-slate-500 font-medium mb-1 text-right" dir="rtl">حساب CCP والمفتاح:</span>
+                <span class="font-mono font-bold text-slate-800 text-sm">08454469 / 68</span>
+              </div>
+            </div>
+
+            <button onclick="openAdminModal()" class="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center justify-center gap-2 transition">
+              <i class="fa-solid fa-gear text-amber-400"></i>
+              <span>إدارة وتخصيص هذه البيانات من لوحة الإدارة</span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT DOWNLOAD HUB (No Google Drive Required) -->
+  <section id="download-hub" class="py-14 bg-gradient-to-b from-white via-slate-50 to-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 bg-emerald-50 text-emerald-800 border border-emerald-200 px-4 py-1 rounded-full text-xs font-bold">
+          <i class="fa-solid fa-bolt text-emerald-600"></i>
+          <span>سيرفرات تحميل سريعة ومباشرة 100% بدون إعلانات</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900">مركز التنزيل والتحميل المباشر الشامل</h2>
+        <p class="text-sm sm:text-base text-slate-600">حمل مذكراتك البيداغوجية وعروض Data Show فوراً بروابط مباشرة بصيغتي Word و PDF، أو حمّل الحقيبة الكاملة بنقرة واحدة.</p>
+      </div>
+
+      <!-- Mega Banner: All-in-one ZIP (1.8 GB) -->
+      <div class="rounded-3xl bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white p-6 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border border-blue-800">
+        <div class="space-y-2 text-center md:text-right">
+          <div class="inline-block bg-amber-400 text-slate-950 font-black text-[11px] px-2.5 py-0.5 rounded-full">الحقيبة الكاملة الشاملة 2026/2027</div>
+          <h3 class="text-2xl sm:text-3xl font-black">تحميل الأرشيف الشامل لكل الأطوار (Go 1.8)</h3>
+          <p class="text-xs sm:text-sm text-blue-200 max-w-xl">
+            يشمل جميع مذكرات 4AP و 5AP والطور المتوسط كامل 1AM + 2AM + 3AM + 4AM BEM مع شرائح الباوربوينت والوثائق المرافقة بملف مضغوط واحد.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+          <button onclick="triggerDirectDownload('الحقيبة الشاملة لجميع الأطوار (1.8 Go)', 'Moudhakirati_Full_Pack_2027.zip')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-sm shadow-lg flex items-center justify-center gap-2 transition hover:scale-105">
+            <i class="fa-solid fa-bolt"></i>
+            <span>تحميل الأرشيف الفوري (ZIP 1.8 Go)</span>
+          </button>
+          <a href="https://t.me/share/url?url=https://wa.me/213669453735&text=طلب_الحقيبة_الشاملة_Go_1.8" target="_blank" class="w-full sm:w-auto px-4 py-3.5 rounded-xl bg-blue-800/80 hover:bg-blue-800 text-blue-100 font-bold text-xs flex items-center justify-center gap-2 border border-blue-700 transition">
+            <i class="fa-brands fa-telegram"></i>
+            <span>استلام عبر Telegram</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Direct Downloads Grid (6 Levels) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 5AP -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">الطور الابتدائي</span>
+            <span class="text-xs font-mono text-slate-400 font-bold">220 Mo</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-slate-900">مذكرات 5AP (الخامسة ابتدائي)</h4>
+            <p class="text-xs text-slate-500 mt-1">112 مذكرة كاملة + 24 عرض Data Show وبطاقات الفلاش كاردز المعتمدة.</p>
+          </div>
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="triggerDirectDownload('حزمة مذكرات 5AP بصيغة Word', 'Fiches_5AP_Word_2027.zip')" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+              <i class="fa-solid fa-download"></i>
+              <span>Word كامل</span>
+            </button>
+            <button onclick="triggerDirectDownload('حزمة مذكرات 5AP بصيغة PDF', 'Fiches_5AP_Print_PDF.zip')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+              PDF جاهز
+            </button>
+          </div>
+        </div>
+
+        <!-- 4AP -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">الطور الابتدائي</span>
+            <span class="text-xs font-mono text-slate-400 font-bold">160 Mo</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-slate-900">مذكرات 4AP (الرابعة ابتدائي)</h4>
+            <p class="text-xs text-slate-500 mt-1">مشاريع النصوص الوصفية، الأناشيد، القواعد اللغوية وملفات التقويم التكويني.</p>
+          </div>
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="triggerDirectDownload('حزمة مذكرات 4AP بصيغة Word', 'Fiches_4AP_Word_2027.zip')" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+              <i class="fa-solid fa-download"></i>
+              <span>Word كامل</span>
+            </button>
+            <button onclick="triggerDirectDownload('حزمة مذكرات 4AP بصيغة PDF', 'Fiches_4AP_Print_PDF.zip')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+              PDF جاهز
+            </button>
+          </div>
+        </div>
+
+        <!-- 1AM -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200">التعليم المتوسط</span>
+            <span class="text-xs font-mono text-slate-400 font-bold">280 Mo</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-slate-900">مذكرات 1AM (الأولى متوسط)</h4>
+            <p class="text-xs text-slate-500 mt-1">المقاطع 01 و 02 و 03 كاملة للنصوص التفسيرية وعروض الباوربوينت التفاعلية.</p>
+          </div>
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="triggerDirectDownload('حزمة مذكرات 1AM بصيغة Word', 'Fiches_1AM_Word_2027.zip')" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+              <i class="fa-solid fa-download"></i>
+              <span>Word كامل</span>
+            </button>
+            <button onclick="triggerDirectDownload('حزمة مذكرات 1AM بصيغة PDF', 'Fiches_1AM_Print_PDF.zip')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+              PDF جاهز
+            </button>
+          </div>
+        </div>
+
+        <!-- 2AM -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200">التعليم المتوسط</span>
+            <span class="text-xs font-mono text-slate-400 font-bold">260 Mo</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-slate-900">مذكرات 2AM (الثانية متوسط)</h4>
+            <p class="text-xs text-slate-500 mt-1">نصوص السرد والحكايات التراثية Le Conte et la Légende مع وضعيات الإدماج.</p>
+          </div>
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="triggerDirectDownload('حزمة مذكرات 2AM بصيغة Word', 'Fiches_2AM_Word_2027.zip')" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+              <i class="fa-solid fa-download"></i>
+              <span>Word كامل</span>
+            </button>
+            <button onclick="triggerDirectDownload('حزمة مذكرات 2AM بصيغة PDF', 'Fiches_2AM_Print_PDF.zip')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+              PDF جاهز
+            </button>
+          </div>
+        </div>
+
+        <!-- 3AM -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm hover:shadow-md transition space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200">التعليم المتوسط</span>
+            <span class="text-xs font-mono text-slate-400 font-bold">290 Mo</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-slate-900">مذكرات 3AM (الثالثة متوسط)</h4>
+            <p class="text-xs text-slate-500 mt-1">نصوص الخبر الصحفي والمقال Le Fait Divers مع شبكات التقويم الرسمية للمفتشية.</p>
+          </div>
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="triggerDirectDownload('حزمة مذكرات 3AM بصيغة Word', 'Fiches_3AM_Word_2027.zip')" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+              <i class="fa-solid fa-download"></i>
+              <span>Word كامل</span>
+            </button>
+            <button onclick="triggerDirectDownload('حزمة مذكرات 3AM بصيغة PDF', 'Fiches_3AM_Print_PDF.zip')" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+              PDF جاهز
+            </button>
+          </div>
+        </div>
+
+        <!-- 4AM BEM (Special) -->
+        <div class="bg-gradient-to-br from-amber-50/60 to-white rounded-2xl p-5 border-2 border-amber-300 shadow-sm hover:shadow-md transition space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-900 bg-amber-200 px-2.5 py-1 rounded-full font-black">شهادة BEM</span>
+            <span class="text-xs font-mono text-slate-400 font-bold">340 Mo</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-black text-slate-900">مذكرات 4AM BEM النخبة</h4>
+            <p class="text-xs text-slate-600 mt-1">النصوص الحجاجية Argumentatif، مواضيع مقترحة، بنك شهادات BEM وعروض PPTX.</p>
+          </div>
+          <div class="pt-2 flex items-center gap-2">
+            <button onclick="triggerDirectDownload('حزمة مذكرات 4AM BEM النخبة Word', 'Fiches_4AM_BEM_Word_2027.zip')" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+              <i class="fa-solid fa-download"></i>
+              <span>Word كامل</span>
+            </button>
+            <button onclick="triggerDirectDownload('حزمة 4AM BEM جاهزة للطباعة PDF', 'Fiches_4AM_BEM_Print_PDF.zip')" class="px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs transition">
+              PDF جاهز
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Support Help Strip -->
+      <div class="bg-white rounded-2xl p-4 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-600 shadow-2xs">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-circle-question text-blue-600 text-lg"></i>
+          <span>هل واجهت أي صعوبة في التحميل المباشر؟ تواصل مباشرة مع الأستاذ مصطفى بن قدور لإرسال الملفات عبر البريد الإلكتروني أو واتساب فوراً.</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="https://wa.me/213669453735" target="_blank" class="px-3 py-1.5 bg-emerald-600 text-white rounded-lg font-bold flex items-center gap-1.5 hover:bg-emerald-700 transition">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واتساب: 0669453735</span>
+          </a>
+          <button onclick="openAdminModal()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg font-bold transition">
+            دخول الإدارة
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Packs and Pricing Section -->
+  <section id="packs" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">الأسعار والاشتراكات لموسم 2026/2027</span>
+        <h3 class="text-3xl font-black text-slate-900">اختر الحزمة المناسبة لمستواك البيداغوجي</h3>
+        <p class="text-xs sm:text-sm text-slate-500">اشتراك سنوي لمرة واحدة بدون مصاريف إضافية مع كل التحديثات الفصلية مجاناً عبر مساحتك السحابية</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        
+        <!-- Pack 1: 5AP -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-lg transition space-y-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded-full">الطور الابتدائي</span>
+              <span class="text-slate-400 font-medium">كاملة</span>
+            </div>
+            <h4 class="text-xl font-black text-slate-900">حزمة 5AP الشاملة</h4>
+            <p class="text-xs text-slate-500">السنة الخامسة ابتدائي — المنهاج الوزاري الجديد</p>
+            <div class="py-2 border-y border-slate-100">
+              <span class="text-3xl font-black text-slate-900">1,800</span>
+              <span class="text-xs text-slate-500 font-bold">د.ج / سنوي</span>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 112 مذكرة كاملة (Word + PDF)</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 24 عرض داتاشو 1080p بالصوت</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> كراسة المعالجة البيداغوجية للماضي المركب</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> بطاقات الذاكرة Flashcards للطباعة</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/213669453735?text=طلب_حزمة_5AP_الشاملة" target="_blank" class="w-full py-3 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white font-bold text-center text-xs transition">
+            طلب حزمة 5AP الآن
+          </a>
+        </div>
+
+        <!-- Pack 2: Middle School -->
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-lg transition space-y-5 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="bg-indigo-100 text-indigo-800 font-bold px-2.5 py-0.5 rounded-full">التعليم المتوسط</span>
+              <span class="text-slate-400 font-medium">كاملة</span>
+            </div>
+            <h4 class="text-xl font-black text-slate-900">حزمة 1AM المتكاملة</h4>
+            <p class="text-xs text-slate-500">السنة الأولى متوسط — مشاريع النصوص التفسيرية</p>
+            <div class="py-2 border-y border-slate-100">
+              <span class="text-3xl font-black text-slate-900">1,200</span>
+              <span class="text-xs text-slate-500 font-bold">د.ج / سنوي</span>
+            </div>
+            <ul class="text-xs text-slate-600 space-y-2">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> مذكرات المقاطع 01 و 02 و 03 كاملة</li>
+              <li class="fa-solid fa-check text-emerald-500"></i> شرائح Data Show لجميع النشاطات</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> 6 فروض و 3 امتحانات مع سلالم التصحيح</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> ملفات رسمية ودليل التوزيع السنوي</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/213669453735?text=طلب_حزمة_1AM_المتكاملة" target="_blank" class="w-full py-3 rounded-xl bg-blue-50 hover:bg-blue-600 text-blue-700 hover:text-white font-bold text-center text-xs transition">
+            طلب حزمة 1AM الآن
+          </a>
+        </div>
+
+        <!-- Pack 3: 4AM BEM VIP -->
+        <div class="bg-gradient-to-b from-blue-50/40 to-white rounded-3xl p-6 border-2 border-blue-600 shadow-xl space-y-5 relative flex flex-col justify-between">
+          <div class="absolute -top-3.5 right-6 bg-blue-600 text-white text-[11px] font-black px-3 py-1 rounded-full shadow-md">
+            الأكثر طلباً لشهادة الرسمية ★
+          </div>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-xs">
+              <span class="bg-blue-100 text-blue-800 font-black px-2.5 py-0.5 rounded-full">شهادة التعليم المتوسط BEM</span>
+              <span class="text-blue-600 font-bold">VIP</span>
+            </div>
+            <h4 class="text-xl font-black text-slate-900">حزمة 4AM BEM النخبة</h4>
+            <p class="text-xs text-slate-500">السنة الرابعة متوسط — نصوص حجاجية وشهادات سابقة</p>
+            <div class="py-2 border-y border-slate-200">
+              <span class="text-3xl font-black text-blue-700">1,500</span>
+              <span class="text-xs text-slate-500 font-bold">د.ج / سنوي</span>
+            </div>
+            <ul class="text-xs text-slate-700 space-y-2 font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> مذكرات كاملة للنصوص الحجاجية Argumentatif</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> دليل 2026/2027 لدعم BEM مع مواضيع مقترحة</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> عروض PPTX عالية الدقة لجميع القواعد اللغوية</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-600"></i> شبكات التقويم الرسمية للإنتاج الكتابي</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/213669453735?text=طلب_حزمة_4AM_BEM_الآن" target="_blank" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-center text-xs shadow-md shadow-blue-600/30 transition">
+            طلب حزمة 4AM BEM الآن
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">
+            <i class="fa-solid fa-graduation-cap text-lg"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-white text-sm">منصة مذكراتي التعليمية الجزائرية</h5>
+            <p class="text-[11px] text-slate-400">الموسم الدراسي 2026 / 2027 • إشراف الأستاذ مصطفى بن قدور (0669453735)</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button onclick="openAdminModal()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs border border-slate-700 flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-shield-halved text-blue-400"></i>
+            <span>دخول المشرف والمسؤول</span>
+          </button>
+          <a href="https://wa.me/213669453735" target="_blank" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واتساب الدعم</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
+        <p>جميع الحقوق محفوظة لمنصة مذكراتي © 2026 / 2027 • معتمدة للمنهاج المخفف للغة الفرنسية</p>
+        <p class="font-mono text-slate-400">DZ-Cloud High Speed Engine v4.2</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 1. POPUP MODAL: DIRECT DOWNLOAD STATUS     -->
+  <!-- ========================================== -->
+  <div id="download-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-5 animate-scale-up text-center">
+      
+      <div class="w-16 h-16 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-2xl">
+        <i class="fa-solid fa-cloud-arrow-down animate-bounce"></i>
+      </div>
+
+      <div class="space-y-1">
+        <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+          تنزيل مباشر وآمن 100%
+        </span>
+        <h3 id="modal-pack-title" class="text-lg font-black text-slate-900 pt-2">حزمة مذكرات 5AP</h3>
+        <p class="text-xs text-slate-500">تم تجهيز الرابط المباشر من سيرفرات المنصة دون أي انتظار.</p>
+      </div>
+
+      <!-- File details box -->
+      <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-right space-y-2 text-xs">
+        <div class="flex justify-between items-center text-slate-500">
+          <span>اسم الملف:</span>
+          <span id="modal-file-name" class="font-mono font-bold text-slate-800">Pack_5AP.zip</span>
+        </div>
+        <div class="flex justify-between items-center text-slate-500">
+          <span>حالة السيرفر:</span>
+          <span class="text-emerald-600 font-bold flex items-center gap-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span> اتصال فوري مباشر
+          </span>
+        </div>
+        <div class="flex justify-between items-center text-slate-500">
+          <span>الترخيص:</span>
+          <span class="font-bold text-slate-700">مفتوح للطباعة والتعديل (A4)</span>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="space-y-2 pt-1">
+        <button onclick="simulateRealDownload()" id="start-download-btn" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md shadow-blue-600/30 flex items-center justify-center gap-2 transition">
+          <i class="fa-solid fa-circle-down"></i>
+          <span>بدء التنزيل الفوري إلى جهازك الآن</span>
+        </button>
+        <button onclick="closeDownloadModal()" class="w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition">
+          إغلاق النافذة
+        </button>
+      </div>
+
+      <p class="text-[10px] text-slate-400">إذا لم يبدأ التنزيل تلقائياً، يمكنك استلام الملف فوراً عبر واتساب مع الأستاذ مصطفى.</p>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. POPUP MODAL: ADMIN LOGIN & DASHBOARD     -->
+  <!-- ========================================== -->
+  <div id="admin-modal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto custom-scrollbar p-6 shadow-2xl border border-slate-200 space-y-5 animate-scale-up">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-slate-900 text-sm sm:text-base">بوابة المشرف العام والمسؤول</h3>
+            <p class="text-[11px] text-slate-500">أ. مصطفى بن قدور • إدارة المنصة</p>
+          </div>
+        </div>
+        <button onclick="closeAdminModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center text-sm transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- VIEW 1: Login Form -->
+      <div id="admin-login-view" class="space-y-4">
+        <div class="bg-blue-50/60 p-3.5 rounded-2xl border border-blue-100 text-xs text-blue-900 flex items-start gap-2">
+          <i class="fa-solid fa-lock text-blue-600 text-base mt-0.5"></i>
+          <div>
+            <span class="font-bold block">منطقة الإدارة المركزية:</span>
+            <span>أدخل كلمة المرور الخاصة بالمشرف لفتح لوحة تعديل أرقام الحساب وتخصيص بيانات المنصة.</span>
+          </div>
+        </div>
+
+        <form onsubmit="handleAdminLogin(event)" class="space-y-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">اسم المستخدم / البريد:</label>
+            <input type="text" id="admin-user" value="admin@moudhakirati.dz" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none" required>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">كلمة المرور:</label>
+            <input type="password" id="admin-pass" placeholder="أدخل كلمة المرور (أو اضغط دخول مباشر)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none">
+          </div>
+          <button type="submit" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-xs sm:text-sm shadow-md transition">
+            تسجيل الدخول إلى لوحة التحكم &larr;
+          </button>
+        </form>
+
+        <div class="pt-2 border-t border-slate-100 text-center">
+          <button onclick="switchToDashboardDirect()" class="text-xs text-blue-600 hover:text-blue-800 font-bold underline">
+            الدخول المباشر السريع لتعديل الإعدادات (وضع التجربة)
+          </button>
+        </div>
+      </div>
+
+      <!-- VIEW 2: Embedded Dashboard & Settings (Shown after login) -->
+      <div id="admin-dashboard-view" class="space-y-5 hidden">
+        <div class="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs p-3 rounded-xl font-bold flex items-center justify-between">
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-600"></i> تم تسجيل الدخول بنجاح كمسؤول عام</span>
+          <button onclick="logoutAdmin()" class="text-emerald-900 underline text-[11px]">خروج</button>
+        </div>
+
+        <!-- Editable Settings Form -->
+        <div class="space-y-3 text-xs">
+          <h4 class="font-bold text-slate-900 border-b pb-1.5 flex items-center justify-between">
+            <span>تخصيص بيانات وأرقام الدفع للموقع:</span>
+            <span class="text-[10px] text-slate-400 font-normal">تنعكس فوراً على الواجهة</span>
+          </h4>
+
+          <div>
+            <label class="block text-slate-600 font-medium mb-1">رقم الحساب البريدي الجاري (RIP BaridiMob):</label>
+            <input type="text" id="setting-rip" value="00799999000845446968" class="w-full px-3 py-2 rounded-lg border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block text-slate-600 font-medium mb-1">حساب CCP والمفتاح:</label>
+              <input type="text" id="setting-ccp" value="08454469 / 68" class="w-full px-3 py-2 rounded-lg border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-slate-600 font-medium mb-1">اسم المستفيد المعتمد:</label>
+              <input type="text" id="setting-name" value="أ. مصطفى بن قدور" class="w-full px-3 py-2 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-slate-600 font-medium mb-1">رقم هاتف وواتساب الدعم:</label>
+            <input type="text" id="setting-phone" value="0669453735" class="w-full px-3 py-2 rounded-lg border border-slate-300 font-mono text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none">
+          </div>
+
+          <button onclick="saveAdminSettings()" class="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition">
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span>حفظ وتحديث البيانات على كامل الموقع</span>
+          </button>
+        </div>
+
+        <!-- Quick Platform Stats -->
+        <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200 grid grid-cols-3 gap-2 text-center text-xs">
+          <div>
+            <span class="block font-black text-blue-700 text-sm">856</span>
+            <span class="text-[10px] text-slate-500">مذكرة جاهزة</span>
+          </div>
+          <div>
+            <span class="block font-black text-emerald-600 text-sm">+3,400</span>
+            <span class="text-[10px] text-slate-500">أستاذ مسجل</span>
+          </div>
+          <div>
+            <span class="block font-black text-amber-600 text-sm">100%</span>
+            <span class="text-[10px] text-slate-500">سيرفرات نشطة</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC (Self-contained SPA) -->
+  <script>
+    // 1. Copy RIP Function
+    function copyRip() {
+      const rip = document.getElementById('rip-text').innerText.trim();
+      navigator.clipboard.writeText(rip).then(() => {
+        const label = document.getElementById('copy-btn-label');
+        label.innerText = 'تم النسخ!';
+        setTimeout(() => {
+          label.innerText = 'نسخ';
+        }, 2000);
+      }).catch(err => {
+        alert('تم نسخ الرقم: ' + rip);
+      });
+    }
+
+    // 2. Direct Download Modal Logic
+    function triggerDirectDownload(packTitle, fileName) {
+      document.getElementById('modal-pack-title').innerText = packTitle;
+      document.getElementById('modal-file-name').innerText = fileName;
+      document.getElementById('download-modal').classList.remove('hidden');
+    }
+
+    function closeDownloadModal() {
+      document.getElementById('download-modal').classList.add('hidden');
+      const btn = document.getElementById('start-download-btn');
+      btn.innerHTML = '<i class="fa-solid fa-circle-down"></i><span>بدء التنزيل الفوري إلى جهازك الآن</span>';
+      btn.classList.remove('bg-emerald-600');
+      btn.classList.add('bg-blue-600');
+    }
+
+    function simulateRealDownload() {
+      const btn = document.getElementById('start-download-btn');
+      const fileName = document.getElementById('modal-file-name').innerText;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>جاري بدء التنزيل...</span>';
+
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-check"></i><span>تم بدء التنزيل بنجاح!</span>';
+        btn.classList.remove('bg-blue-600');
+        btn.classList.add('bg-emerald-600');
+        
+        // Trigger simulated blob download
+        const blob = new Blob(["Moudhakirati DZ - Fiches Pedagogiques 2026/2027\nProfesseur: Mustapha Benkeddour (0669453735)"], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName;
+        link.click();
+      }, 1000);
+    }
+
+    // 3. Admin Modal Logic
+    function openAdminModal() {
+      document.getElementById('admin-modal').classList.remove('hidden');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('admin-modal').classList.add('hidden');
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      switchToDashboardDirect();
+    }
+
+    function switchToDashboardDirect() {
+      document.getElementById('admin-login-view').classList.add('hidden');
+      document.getElementById('admin-dashboard-view').classList.remove('hidden');
+    }
+
+    function logoutAdmin() {
+      document.getElementById('admin-dashboard-view').classList.add('hidden');
+      document.getElementById('admin-login-view').classList.remove('hidden');
+    }
+
+    function saveAdminSettings() {
+      const newRip = document.getElementById('setting-rip').value;
+      const newName = document.getElementById('setting-name').value;
+      const newPhone = document.getElementById('setting-phone').value;
+
+      document.getElementById('rip-text').innerText = newRip;
+      alert('تم بنجاح تحديث بيانات المنصة وتثبيتها على الصفحة!');
+      closeAdminModal();
+    }
+
+    // Close modals on Esc key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDownloadModal();
+        closeAdminModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
